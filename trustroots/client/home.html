@@ -1,7 +1,10 @@
 <template name="home">
-  {{#if currentUser}}
-    <p>Click Rate in the menu above to submit ratings.</p>
-  {{else}}
-    <p>Register / login top right to get started...</p>
-  {{/if}}
+  <form id="search-form">
+    <p>Search for feedback: <input type="text" name="search" id="search"></p>
+  </form>
+  {{> results}}
+</template>
+
+<template name="results">
+  <p>Results coming soon...</p>
 </template>

@@ -8,10 +8,7 @@
     {{> nav}}
     {{> flashMessages}}
     <p>Welcome to TrustRoots. Reputation built on the blockchain.</p>
-    {{> search}}
-    <div class="container">
-      {{yield}}
-    </div>
+    {{yield}}
   </div>
 </template>
 
@@ -31,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="app-nav">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{pathFor 'home'}}">Search</a></li>
+        <li><a href="{{pathFor 'home'}}">Search</a></li>
         <li><a href="{{pathFor 'rate'}}">Rate</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -51,15 +48,4 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
-</template>
-
-<template name="search">
-  <form id="search-form">
-    <p>Search for feedback: <input type="text" name="search" id="search"></p>
-  </form>
-  {{> results}}
-</template>
-
-<template name="results">
-  <p>Results coming soon...</p>
 </template>

@@ -3,15 +3,17 @@
   <title>TrustRoots</title>
 </head>
 
-<body>
+<template name="layout">
   <div class="container">
     {{> nav}}
     {{> flashMessages}}
     <p>Welcome to TrustRoots. Reputation built on the blockchain.</p>
     {{> search}}
-    {{> home}}
+    <div class="container">
+      {{yield}}
+    </div>
   </div>
-</body>
+</template>
 
 <template name="nav">
   <nav class="navbar navbar-default" role="navigation">
@@ -29,8 +31,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="app-nav">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="{{pathFor 'home'}}">Search</a></li>
+        <li><a href="{{pathFor 'rate'}}">Rate</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">

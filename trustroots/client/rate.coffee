@@ -1,0 +1,3 @@
+
+Template.rate.References = ->
+  @References

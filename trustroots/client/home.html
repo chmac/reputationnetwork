@@ -1,17 +1,7 @@
 <template name="home">
   {{#if currentUser}}
-    {{> create}}
+    <p>Click Rate in the menu above to submit ratings.</p>
   {{else}}
     <p>Register / login top right to get started...</p>
   {{/if}}
-</template>
-
-<template name="create">
-  <p>Enter your feedback</p>
-    {{quickForm
-      schema=References
-      type="insert"
-      buttonClasses="btn btn-primary"
-      buttonContent="Create"
-    }}
 </template>

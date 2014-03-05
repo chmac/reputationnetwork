@@ -7,6 +7,8 @@
   <div class="container">
     {{> nav}}
     {{> flashMessages}}
+    <p>Welcome to TrustRoots. Reputation built on the blockchain.</p>
+    {{> search}}
     {{> home}}
   </div>
 </body>
@@ -49,11 +51,26 @@
   </nav>
 </template>
 
+<template name="search">
+  <form id="search-form">
+    <p>Search for feedback: <input type="text" name="search" id="search"></p>
+  </form>
+  {{> results}}
+</template>
+
+<template name="results">
+  <p>Results coming soon...</p>
+</template>
+
 <template name="home">
   {{#if currentUser}}
-    <p>Get started...</p>
+    {{> postFeedback}}
   {{else}}
-    <p>Welcome to TrustRoots. Reputation built on the blockchain.</p>
-    <p>Search for trust:</p>
+    <p>Register / login top right to get started...</p>
   {{/if}}
+</template>
+
+<template name="postFeedback">
+  <p>Enter your feedback</p>
+  
 </template>

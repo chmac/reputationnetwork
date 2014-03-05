@@ -3,6 +3,8 @@
     "accounts-ui-bootstrap-3": {},
     "bootstrap-3": {},
     "flash-messages": {},
-    "iron-router": {}
+    "iron-router": {},
+    "collection2": {},
+    "autoform": {}
   }
 }

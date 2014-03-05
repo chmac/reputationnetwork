@@ -3,12 +3,21 @@
     transactionId:
       type: String
       max: 200
+      label: 'Transaction ID'
 
     recipientAddress:
       type: String
 
-    rating:
+    website:
       type: String
+      label: 'Vendor website'
+      optional: true
+
+    rating:
+      type: Number
+      label: 'Rating out of 100'
+      min: 0
+      max: 100
 
     comment:
       type: String

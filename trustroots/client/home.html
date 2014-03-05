@@ -1,0 +1,17 @@
+<template name="home">
+  {{#if currentUser}}
+    {{> create}}
+  {{else}}
+    <p>Register / login top right to get started...</p>
+  {{/if}}
+</template>
+
+<template name="create">
+  <p>Enter your feedback</p>
+    {{quickForm
+      schema=References
+      type="insert"
+      buttonClasses="btn btn-primary"
+      buttonContent="Create"
+    }}
+</template>

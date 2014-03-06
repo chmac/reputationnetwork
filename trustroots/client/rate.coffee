@@ -4,7 +4,7 @@
 #  @References
 
 Template.rate.rendered = ->
-  jQuery('input[name=comment]').parent().after('<div id="siginput-wrapper">Sign this text:<br><input id="siginput" readonly></input></div>');
+  jQuery('input[name=comment]').parent().after('<div class="form-group"><label class="control-label" for="siginput">Sign this text:</label><input id="siginput" class="form-control" readonly></input></div>');
 
 Template.rate.events
   'change input': (e)->

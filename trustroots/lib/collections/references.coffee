@@ -24,6 +24,11 @@
       optional: true
       max: 200
 
+    signature:
+      type: String
+      optional: true
+      max: 200
+
 References.allow
   insert: (userId, doc) ->
     if not userId?

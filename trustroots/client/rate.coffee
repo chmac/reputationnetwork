@@ -10,7 +10,8 @@ Template.rate.events
   'change input': (e)->
     all = []
     jQuery('input').each (i) ->
-      all.push jQuery(this).val()
+      if this.id isnt 'siginput' and jQuery(this).attr('name') isnt 'signature'
+        all.push jQuery(this).val()
     jQuery('#siginput').val(all.join(';'))
   'click #siginput': (e)->
     e.target.select()
